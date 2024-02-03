@@ -1,70 +1,93 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 .popup {
   margin: auto;
   width: 350px;
   background: rgb(99, 120, 91);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .popup :where(.picker, header, .all-colors) {
   display: flex;
   align-items: center;
 }
+
 .popup .picker {
   padding: 30px 0;
   background: #c3e7b0;
   justify-content: center;
+  border-radius: 10px 10px 0 0;
 }
+
 .picker #color-picker {
   border: none;
   outline: none;
-  color: rgb(175, 191, 171);
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
   background: #0a4701;
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
 }
+
 #color-picker:hover {
   background: #235d02;
 }
+
 .picked-colors {
   margin: 10px 15px;
 }
+
 .picked-colors header {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
 header .title {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
 }
+
 header .clear-all {
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgb(175, 191, 171);
+  transition: color 0.3s ease;
 }
+
 header .clear-all:hover {
-  color: rgb(175, 191, 171);
+  color: #fff;
 }
+
 .picked-colors.hide {
   display: none;
 }
+
 .picked-colors .all-colors {
   flex-wrap: wrap;
   list-style: none;
   margin: 10px 0 15px;
 }
+
 .all-colors .color {
   display: flex;
   cursor: pointer;
   margin-bottom: 10px;
   width: calc(100% / 3);
 }
+
 .all-colors .rect {
   height: 21px;
   width: 21px;
@@ -72,9 +95,11 @@ header .clear-all:hover {
   margin-right: 8px;
   border-radius: 5px;
 }
+
 .all-colors .color span {
   font-size: 0.96rem;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: "Open sans";
+  color: #fff;
+  font-family: "Poppins", sans-serif;
 }

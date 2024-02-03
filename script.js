@@ -43,6 +43,7 @@ const activateEyeDropper = () => {
                 showColor();
             }
         } catch (error) {
+            console.log(error)
             alert("Failed to copy the color code!");
         }
         document.body.style.display = "block";
